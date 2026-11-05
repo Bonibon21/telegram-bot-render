@@ -61,7 +61,11 @@ def get_main_keyboard():
         [KeyboardButton(text="📊 Статистика по категориям"), KeyboardButton(text="📅 Месячный отчет")],
         [KeyboardButton(text="💰 Общий итог")]
     ]
-    return ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
+    return ReplyKeyboardMarkup(
+        keyboard=kb, 
+        resize_keyboard=True,
+        is_persistent=True
+    )
 
 def get_categories_inline_keyboard():
     buttons = []
